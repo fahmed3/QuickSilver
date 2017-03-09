@@ -1,7 +1,7 @@
-//Tiffany Moi
+//Team QuickSilver - Fabiha Ahmed, Judy Liu, Tiffany Moi
 //APCS2 pd5
-//HW#15 -- So So Quick
-//2017-03-08
+//Lab01
+//2017-03-09
 /*****************************************************
  * class QuickSort
  * (skeleton)
@@ -22,7 +22,7 @@
  *     Runtime: O(nlogn)
  *
  * 3. Approach to handling duplicate values in array:
- *    Treat them as normal values.
+ *    Partition takes care of the values.
  *****************************************************/
 
 public class QuickSort 

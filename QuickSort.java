@@ -1,24 +1,29 @@
+//Tiffany Moi
+//APCS2 pd5
+//HW#15 -- So So Quick
+//2017-03-08
 /*****************************************************
  * class QuickSort
- * (skeleton) <<delete this line if untrue>>
+ * (skeleton)
  * Implements quicksort algo to sort an array of ints in place
  *
  * 1. Summary of QuickSort algorithm:
- * QSort(arr): 
+ * QSort(arr): Uses partition to sort the array into two sides and
+ * continues to split up the sides to sort them.
  *
  * 2a. Worst pivot choice / array state and associated runtime: 
+ *     The worst pivot choice is if the number ends up at one of the 
+ *     extremes and the worst array state is when the array is backwards.
+ *     Runtime: O(n^2)
  *
  * 2b. Best pivot choice / array state and associated runtime:
+ *     Best pivot choice is if the number ends up at the middle of the
+ *     array and the best array state is if it is already in order.
+ *     Runtime: O(nlogn)
  *
  * 3. Approach to handling duplicate values in array:
- *
+ *    Treat them as normal values.
  *****************************************************/
-
-/***
-    PROTIP: Assume no duplicates during initial development phase.
-    Once you have a working implementation, test against arrays 
-    with duplicate values, and revise if necessary. (Backup first.)
- ***/
 
 public class QuickSort 
 {
@@ -63,15 +68,22 @@ public class QuickSort
      * void qsort(int[])
      * @param d -- array of ints to be sorted in place
      *****************************************************/
-    public static void qsort(int[] arr, int start, int end){
-	int target = (start + end)/2;
-	int i = partition(arr, start, end, target);
-	qsort(arr, i+1, end, target);
-	qsort(arr, start, i-1, target);
+    public static void qsort(int[] arr){
+	halp(arr, 0, arr.length-1);
     }
 
     // Thinkers are encouraged to roll their own subroutines.
     // Insert your auxiliary helper methods here.
+    public static void halp(int[] arr, int start, int end){
+	int target = (start + end)/2;
+	int i = partition(arr, start, end, target);
+	if (end - i - 1 > 0){
+	    halp(arr, i+1, end);
+	}
+	if (i-1-start > 0){
+	    halp(arr, start, i-1);
+	}
+    }
     public static int partition(int[] arr, int start, int end, int pvPos){
 	int pvVal = arr[pvPos];
 	arr[pvPos]=arr[end];
@@ -99,8 +111,8 @@ public class QuickSort
     //main method for testing
     public static void main( String[] args ) 
     {
-	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
-
+	 
+	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
 	//get-it-up-and-running, static test case:
 	int [] arr1 = {7,1,5,12,3};
 	System.out.println("\narr1 init'd to: " );
@@ -128,7 +140,7 @@ public class QuickSort
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y) 
+
 
 	//get-it-up-and-running, static test case w/ dupes:
 	int [] arr2 = {7,1,5,12,3,7};
@@ -139,7 +151,7 @@ public class QuickSort
        	System.out.println("arr2 after qsort: " );
 	printArr(arr2);
 
-
+	/*~~~~s~l~i~d~e~~~m~e~~~d~o~w~n~~~~~~~~~~~~~~~~~~~~ (C-k, C-k, C-y)
 	// arrays of randomly generated ints
 	int[] arrMatey = new int[20];
 	for( int i = 0; i < arrMatey.length; i++ )

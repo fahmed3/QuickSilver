@@ -18,7 +18,8 @@ public class QuickSortTester{
 	}
 
 	//get start time
-	long startTime = System.currentTimeMillis();
+	//long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
 	//System.out.println(startTime);
 
 	//sort every array
@@ -27,12 +28,14 @@ public class QuickSortTester{
 	}
 
 	//get end time
-	long endTime = System.currentTimeMillis();
+	//long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time
 	//System.out.println(endTime - startTime);
-	return (double)(endTime - startTime) / 1000.0;
+	return ((double)(endTime - startTime)/1000000) / 1000;
+	//return (double)(endTime - startTime) / 1000;
     }
     //return int array of size s, with each element fr range [0,maxVal)
     public static double buildArrayB( int s ) {
@@ -41,18 +44,18 @@ public class QuickSortTester{
 	    retArr[i] = i;
 	}
 		//get start time
-	long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
 	//System.out.println(startTime);
 
 	QuickSort.qsort(retArr);
 
 	//get end time
-	long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time
 	//System.out.println(endTime - startTime);
-	return (double)(endTime - startTime);
+	return (double)(endTime - startTime)/1000000;
     }
     public static double  buildArrayW( int s ) {
 	int[] retArr = new int[s];
@@ -60,23 +63,23 @@ public class QuickSortTester{
 	    retArr[i] = s-i;
 	}
 			//get start time
-	long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
 	//System.out.println(startTime);
 
 	QuickSort.qsort(retArr);
 
 	//get end time
-	long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time
 	//System.out.println(endTime - startTime);
-	return (double)(endTime - startTime);
+	return (double)(endTime - startTime)/1000000;
     }
     public static void main(String[] args){
 
-	//System.out.println ("B 1000: " + buildArrayB(1000)); //best case
-	System.out.println ("W 100000: " + buildArrayW(100000)); //worse case
-	//System.out.println("10000: " + tester(10000));
+	System.out.println ("B 10000: " + buildArrayB(10000)); //best case
+	//System.out.println ("W 10000: " + buildArrayW(10000)); //worse case
+	//System.out.println("10000: " + tester(1000));
     }
 }

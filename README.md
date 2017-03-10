@@ -12,7 +12,8 @@
   middle of the array, in order to see if the pivot points mattered. 
 
 ## Data
-https://docs.google.com/spreadsheets/d/1ojRcGFM_Q5E_6y7UBWRjculBVSIGnfbGKXgVfCofx6Q/pubhtml
+[Results](https://docs.google.com/spreadsheets/d/1ojRcGFM_Q5E_6y7UBWRjculBVSIGnfbGKXgVfCofx6Q/pubhtml)
+
 
 ## Conclusions
  Based on our data, it seems like the selection of the pivot point does not matter because the two algorithms using the midpoint and the beginning of the array as pivot points generated similar results. However, the sorted-ness of the array seems to affect run time. The backward array generated the fastest run times and the sorted array generated slightly longer run times, whereas the average case had a significantly longer runtime than the aforementioned ones.

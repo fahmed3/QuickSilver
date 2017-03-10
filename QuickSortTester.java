@@ -18,8 +18,8 @@ public class QuickSortTester{
 	}
 
 
-	//long startTime = System.nanoTime();
-	long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
+	//long startTime = System.currentTimeMillis();
 	//System.out.println(startTime);
 
 	//sort every array
@@ -28,8 +28,8 @@ public class QuickSortTester{
 	}
 
 	//get end time
-	long endTime = System.currentTimeMillis();
-	//long endTime = System.nanoTime();
+	//long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time
@@ -47,8 +47,8 @@ public class QuickSortTester{
 	}
 
 		//get start time
-	long startTime = System.currentTimeMillis();
-	//long startTime = System.nanoTime();
+	//long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
 	//System.out.println(startTime);
 
 	for (int[] arr : tester) {
@@ -56,8 +56,8 @@ public class QuickSortTester{
 	}
 	
 	//get end time
-	long endTime = System.currentTimeMillis();
-	//long endTime = System.nanoTime();
+	//long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time
@@ -73,16 +73,16 @@ public class QuickSortTester{
 	}
 
 			//get start time
-	long startTime = System.currentTimeMillis();
-	//long startTime = System.nanoTime();
+	//long startTime = System.currentTimeMillis();
+	long startTime = System.nanoTime();
 	//System.out.println(startTime);
 
 	for (int[] arr:tester){
 	QuickSort.qsort(arr);
 	}
 	//get end time
-	long endTime = System.currentTimeMillis();
-	//long endTime = System.nanoTime();
+	//long endTime = System.currentTimeMillis();
+	long endTime = System.nanoTime();
 	//System.out.println(endTime);
 
 	//return average time

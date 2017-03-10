@@ -91,8 +91,8 @@ public class QuickSortTester{
     }
     public static void main(String[] args){
 
-	//System.out.println ("B 10000: " + buildArrayB(10000)); //best case
-	//System.out.println ("W 10000: " + buildArrayW(10000)); //worse case
-	System.out.println("10000: " + tester(1000));
+	//System.out.println ("B 1000: " + buildArrayB(1000)); //best case
+	//System.out.println ("W 1000: " + buildArrayW(1000)); //worse case
+	System.out.println("1000: " + tester(1000));
     }
 }

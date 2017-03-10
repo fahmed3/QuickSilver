@@ -75,7 +75,7 @@ public class QuickSort
     // Thinkers are encouraged to roll their own subroutines.
     // Insert your auxiliary helper methods here.
     public static void halp(int[] arr, int start, int end){
-	int target = (start + end)/2;
+	int target = start;
 	int i = partition(arr, start, end, target);
 	if (end - i - 1 > 0){
 	    halp(arr, i+1, end);

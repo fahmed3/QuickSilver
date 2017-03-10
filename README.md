@@ -3,7 +3,7 @@
 ## Big-Oh Runtime
   * Best Case : O(nlogn) 
   * Average Case : O(n^2)
-  * Worst Case : 
+  * Worst Case : O(nlogn)
   
 ## Methodology
   We generated arrays that were randomized, sorted in ascending order, and sorted backwards. These arrays were listed in a larger array, 

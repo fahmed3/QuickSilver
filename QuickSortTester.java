@@ -35,23 +35,48 @@ public class QuickSortTester{
 	return (double)(endTime - startTime) / 1000.0;
     }
     //return int array of size s, with each element fr range [0,maxVal)
-    public static int[] buildArrayB( int s ) {
+    public static double buildArrayB( int s ) {
 	int[] retArr = new int[s];
-	for( int i = 0; i < retArr.length; i++ )
+	for( int i = 0; i < retArr.length; i++ ){
 	    retArr[i] = i;
-	return retArr;
+	}
+		//get start time
+	long startTime = System.currentTimeMillis();
+	//System.out.println(startTime);
+
+	QuickSort.qsort(retArr);
+
+	//get end time
+	long endTime = System.currentTimeMillis();
+	//System.out.println(endTime);
+
+	//return average time
+	//System.out.println(endTime - startTime);
+	return (double)(endTime - startTime);
     }
-    public static int[] buildArrayW( int s ) {
+    public static double  buildArrayW( int s ) {
 	int[] retArr = new int[s];
 	for( int i = 0; i < retArr.length; i++ ){
 	    retArr[i] = s-i;
 	}
-	return retArr;
+			//get start time
+	long startTime = System.currentTimeMillis();
+	//System.out.println(startTime);
+
+	QuickSort.qsort(retArr);
+
+	//get end time
+	long endTime = System.currentTimeMillis();
+	//System.out.println(endTime);
+
+	//return average time
+	//System.out.println(endTime - startTime);
+	return (double)(endTime - startTime);
     }
     public static void main(String[] args){
-	//int[] arr = buildArrayW(1000);
-	int[] arr2 = buildArrayB(1000);
-	QuickSort.qsort(arr2);
+
+	//System.out.println ("B 1000: " + buildArrayB(1000)); //best case
+	System.out.println ("W 100000: " + buildArrayW(100000)); //worse case
 	//System.out.println("10000: " + tester(10000));
     }
 }

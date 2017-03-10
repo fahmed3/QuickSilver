@@ -78,7 +78,7 @@ public class QuickSortTester{
 	//System.out.println(startTime);
 
 	for (int[] arr:tester){
-	QuickSort.qsort(arr);
+	    QuickSort.qsort2(arr);
 	}
 	//get end time
 	//long endTime = System.currentTimeMillis();

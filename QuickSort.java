@@ -72,9 +72,26 @@ public class QuickSort
 	halp(arr, 0, arr.length-1);
     }
 
+    public static void qsort2(int[] arr){
+	halp2(arr,0, arr.length-1);
+    }
+	    
+
+    //for best and average case
     // Thinkers are encouraged to roll their own subroutines.
     // Insert your auxiliary helper methods here.
     public static void halp(int[] arr, int start, int end){
+	int target = (start+end)/2;
+	int i = partition(arr, start, end, target);
+	if (end - i - 1 > 0){
+	    halp(arr, i+1, end);
+	}
+	if (i-1-start > 0){
+	    halp(arr, start, i-1);
+	}
+    }
+    //for worst case
+    public static void halp2(int[] arr, int start, int end){
 	int target = start;
 	int i = partition(arr, start, end, target);
 	if (end - i - 1 > 0){
@@ -84,6 +101,7 @@ public class QuickSort
 	    halp(arr, start, i-1);
 	}
     }
+    
     public static int partition(int[] arr, int start, int end, int pvPos){
 	int pvVal = arr[pvPos];
 	arr[pvPos]=arr[end];

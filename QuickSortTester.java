@@ -3,7 +3,7 @@
 //Lab01
 //2017-03-09
 /*****************************************************
-
+For generating execution times, we created methods to generate arrays for the average case, best case, and worst case. In the best case, the array is already in order and the pivot number is already in the middle. In the worst case the array is backwards and the pivot number is in one of the extremes. For the average case we are using the array is sorted with randomly generated numbers. 
  *****************************************************/
 public class QuickSortTester{
     //tester method for testing runTime of array of length n
@@ -49,9 +49,9 @@ public class QuickSortTester{
 	return retArr;
     }
     public static void main(String[] args){
-	int[] arr = buildArrayW(1000);
-	//int[] arr2 = buildArrayB(1000);
-	QuickSort.qsort(arr);
-	//System.out.println("10: " + tester(10));
+	//int[] arr = buildArrayW(1000);
+	int[] arr2 = buildArrayB(1000);
+	QuickSort.qsort(arr2);
+	//System.out.println("10000: " + tester(10000));
     }
 }
